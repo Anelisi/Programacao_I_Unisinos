@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Cronometro {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int hora = 0, min = 0, seg = 0, i = 0;
+        int hora, min, seg, i = 0;
 
         System.out.println("Digite em quantos minutos o cronômetro deverá finalizar a contagem: ");
         int c = sc.nextInt();
