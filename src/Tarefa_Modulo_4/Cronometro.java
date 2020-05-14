@@ -9,28 +9,30 @@ public class Cronometro {
 
         System.out.println("Digite em quantos minutos o cronômetro deverá finalizar a contagem: ");
         int c = sc.nextInt();
+        if (c > 60) {
+            System.out.println("Valores que excedem a 60 minutos são inválidos para a contagem do cronômetro. \n Tente novamente com valores abaixo de 60 minutos, por favor!");
+        } else {
+            System.out.println("==================   INÍCIO    ================== ");
+            System.out.println("================== CRONÔMETRO  ================== ");
 
-        System.out.println("==================   INÍCIO    ================== ");
-        System.out.println("================== CRONÔMETRO  ================== ");
+            do {
 
-        do {
+                i++;
+                seg = i % 60;
+                min = i / 60;
+                hora = min / 60;
 
-            i++;
-            seg = i % 60;
-            min = i / 60;
-            hora = min / 60;
+                min %= 60;
 
-            min %= 60;
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                }
+                System.out.printf("                    %02d:%02d:%02d\n", hora, min, seg);
+            } while (min < c);
 
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-            }
-            System.out.printf("                    %02d:%02d:%02d\n", hora, min, seg);
-        } while (min < c);
-
-        System.out.println("==================    FIM      ================== ");
-        System.out.println ("================== CRONÔMETRO  ================== ");
+            System.out.println("==================    FIM      ================== ");
+            System.out.println("================== CRONÔMETRO  ================== ");
+        }
     }
-
 }
