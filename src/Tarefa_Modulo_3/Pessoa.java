@@ -17,16 +17,15 @@ public class Pessoa {
     }
     public void classificaPessoa (Pessoa p1, Pessoa p2)
     {
-        if (p1.getIdade() > p2.getIdade())
-        {System.out.println ("O mais velho é: "+ p1.getNome());
+        if (p1.getIdade() > p2.getIdade()){
+            System.out.println ("O mais velho é: "+ p1.getNome());
         }
 
-        else if (p2.getIdade() > p1.getIdade())
-        {System.out.println ("O mais velho é: "+ p2.getNome());
-        }
+        else if (p2.getIdade() > p1.getIdade()){
+            System.out.println ("O mais velho é: "+ p2.getNome());
 
-        else {System.out.println ("As duas pessoas tem a mesma idade");
-        }
+        } else System.out.println ("As duas pessoas tem a mesma idade");
+
     }
 }
 

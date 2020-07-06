@@ -36,7 +36,7 @@ public class Bistro {
             this.comanda.setValor(14.50);
         } else if (hora < 19) {
             this.servico = "Lanche";
-            refeicao[0] = new Refeicao ("iogurte", false, true, 1,1.00);
+            refeicao[0] = new Refeicao ("Iogurte", false, true, 1,1.00);
             refeicao[1] = new Refeicao("Bolo", true, false, 1, 3.00);
             refeicao[2] = new Refeicao("Torrada", false, false, 1, 3.50);
             refeicao[3] = new Refeicao("Suco", true, true, 1, 2.00);
@@ -99,6 +99,15 @@ public class Bistro {
         System.out.println("========================= BISTRÔ ==============================");
         System.out.printf("Nome: %s \nEntrada de dinheiro no dia: %.2f", this.getNomeBistro(), this.getEntradaDinheiro());
         System.out.println("\n===============================================================");
+    }
+
+    public void menuPedido() {
+        System.out.println("======================== MENU DO PEDIDO =======================");
+        System.out.println(this.servico + ":");
+        for (int i = 0; i < refeicao.length; i++){
+            System.out.println(refeicao[i].getQuantidade() + " " + refeicao[i].getNome());
+        }
+        System.out.println("\n==============================================================");
     }
 }
 

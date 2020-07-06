@@ -1,35 +1,25 @@
 package CategoriaAtleta;
 
+import java.util.Scanner;
+
 public class CatAtleta {
+
     public static void main(String[] args) {
-        Atleta a1 = new Atleta(25, 58.5f);
+        Scanner sc = new Scanner(System.in);
+        Atleta a1 = new Atleta();
 
-        a1.categoriaAtleta();
+        System.out.println("Digite o nome do Atleta: ");
+        String nome = sc.nextLine();
+        a1.setNome(nome);
+        System.out.println("Informe o peso do Atleta: ");
+        float peso = sc.nextFloat();
+        a1.setPeso(peso);
+        System.out.println("Informe a idade do Atleta: ");
+        int idade = sc.nextInt();
+        a1.setIdade(idade);
+        a1.exibeDados();
     }
 
-    public static class Atleta {
-        int idade;
-        float peso;
-
-        public Atleta(int idade, float peso) {
-            this.idade = idade;
-            this.peso = peso;
-        }
-
-        public void categoriaAtleta() {
-            if (idade < 15) {
-                System.out.println("Categoria Infantil");
-            } else if (idade < 17 && peso <= 50f) {
-                System.out.println("Categoria Juvenil Leve");
-            } else if (idade < 17 && peso > 50f) {
-                System.out.println("Categoria Juvenil Pesado");
-            } else if (idade < 25 && peso <= 60f) {
-                System.out.println("Categoria Senior Leve");
-            } else if (idade < 26 && peso > 60f) System.out.println("Categoria Senior Pesado");
-            else {
-                System.out.println("Categoria Veterano");
-            }
-        }
-    }
 }
+
 

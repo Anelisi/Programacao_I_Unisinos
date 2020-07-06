@@ -36,7 +36,7 @@ public class Cliente extends Pessoa {
         System.out.printf("\nOlá!\nO valor da sua comanda é R$ %.2f", bistro.comanda.getValor());
         System.out.println("\nQuer pagar com 10%? S/N");
         String resp = sc.nextLine();
-        if (resp.equals("S")){
+        if (resp.equalsIgnoreCase("S")){
             bistro.comanda.gorgeta();
             valorComanda =  bistro.comanda.getValor();
             bistro.setEntradaDinheiro(valorComanda);

@@ -19,6 +19,7 @@ public class main {
         bistro1.exibeDados();
         funcionarios[0].exibeDados();
         funcionarios[2].exibeDados();
+        bistro1.menuPedido();
         cliente.exibeDados();
     }
 }
